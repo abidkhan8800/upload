@@ -4,7 +4,7 @@ const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
 const ejs = require('ejs');
-const mysql = require('mysql');
+//const mysql = require('mysql');
 
 // const db = mysql.createConnection({
 //     host: "localhost",
