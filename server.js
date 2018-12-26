@@ -6,16 +6,16 @@ const cors = require('cors');
 const ejs = require('ejs');
 const mysql = require('mysql');
 
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "AbidKhan@9035",
-    database: "photo_upload"
-})
-db.connect((err)=>{
-    if (err) console.log(err);
-    else console.log("connected");
-})
+// const db = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "AbidKhan@9035",
+//     database: "photo_upload"
+// })
+// db.connect((err)=>{
+//     if (err) console.log(err);
+//     else console.log("connected");
+// })
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -68,8 +68,8 @@ app.post('/upload',(req, res)=>{
     })
     
 })
+const port = process.env.PORT || 8080;
+app.listen(port,()=>{
 
-app.listen(8080,()=>{
-
-    console.log("runnin at 8080")
+    console.log(`runnin at ${port}`)
 })
