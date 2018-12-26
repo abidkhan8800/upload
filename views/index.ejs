@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<htm>  
+    <head></head>
+    <body>
+        
+        <form action="http://localhost:8080/upload" method="post" enctype="multipart/form-data">
+            <h2>File</h2>
+            
+            <input type="file" name="image" multiple>
+            <button type="submit">Upload</button>
+        </form>
+        <%= typeof msg === 'undefined'? '': msg %><br>
+        <%= typeof data === ''? '': data%>
+            <!-- <img src="<%=data%>" alt='img'> -->
+        <!-- <table>
+            
+            <% for(var i=0; i < data.length; i++) { %>
+               <tr>
+                 <td><%= data[i].id %></td>
+               </tr>
+            <% } %>
+        </table> -->
+    </body>     
+
+</htm>
