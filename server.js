@@ -40,8 +40,8 @@ var storage = multer.diskStorage({
 const upload = multer({storage: storage}).array('image',5);
 
 app.get('/', (req,res)=>{
-    res.send("hello")
-    //res.render('index',{msg: "",data: ''});
+    //res.send("hello")
+    res.render('index',{msg: "",data: ''});
 
 })
 
