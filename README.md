@@ -12,20 +12,17 @@
  * You will find a lot of resources for it online.
     
  ## Q. What it Does?
- This is a simple code which will allow you to add photos to server. Frist when you start the app you will see the following   screen
-![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img1.png) 
-
-when you click on choose photos a window will pop up and you can select the select images you want to store as shown in the following photo
-
-![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img2.png)
-
-after selecting the file/files that you want to upload to server click on upload button and you will see a message below the upload regarding the status of your process as in this case the image is uploaded successfully as show in the picture.
-
-![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img3.png)
+ This is a simple code which will allow you to add photos to server. Frist when you start the app you will see the following   screen when you click on choose photos a window will pop up and you can select the select images you want to store as shown in the following photo after selecting the file/files that you want to upload to server click on upload button and you will see a message below the upload regarding the status of your process as in this case the image is uploaded successfully as show in the picture.
 
 ## Q. How to run this on your pc?
 * clone the repo - git clone https://github.com/abidkhan8800/upload-image.git
 * npm install
 * npm start 
+* after that goto your loaclhost:8080 you will see the homepage.
+![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img1.png)
+![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img2.png)
+![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img2.png)
+
+
 
   
