@@ -4,7 +4,18 @@ const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
 const ejs = require('ejs');
+//const mysql = require('mysql');
 
+// const db = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "AbidKhan@9035",
+//     database: "photo_upload"
+// })
+// db.connect((err)=>{
+//     if (err) console.log(err);
+//     else console.log("connected");
+// })
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -58,11 +69,24 @@ app.post('/upload',(req, res)=>{
     let msg = "";
     upload(req,res,err=>{
         if(err){
-            msg = err.message;           
-        }else{
+            
+            msg = err.message;
+           
+            //res.render('index',{msg:msg})
+        }
+         else{
             //let msg =""
             console.log("hello");
             req.files.length === 1 ? msg="Image uploaded succesfully":msg="Images uploaded successfully"
+            console.log(req.files);
+           //s let locat =`${req.files[0].path}`;
+            for(let i =0; i < req.files.length;i++){
+            console.log(`${req.files[i].path}`)
+            //res.render('index',{msg:msg})
+            //console.log(;
+            
+        }
+      
         }
         res.render('index',{msg: msg});;
     })
