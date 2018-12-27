@@ -1,5 +1,5 @@
 # Image Upload using Node
-<pre>
+
  <strong>Q. what I have used?</strong>
  
     1. Express – building Server
@@ -13,10 +13,10 @@
     1. Express makes it easy to build a server and also building Apis.
     2. Multer is a very easy package  to use.
     3. You will find a lot of resources for it online.
-
+</pre>    
+<pre>
  <strong>Q. What it Does?</strong>
  
    This is a simple code which will allow you to add photos to server. Frist when you start the app you will see the following      screen
-![alt tag](http:https://github.com/abidkhan8800/task2/uploads/Screenshot from 2018-12-27 15-40-45.png)  
-
- </pre>
+</pre>
+![alt tag](https://raw.githubusercontent.com/abidkhan8800/task2/master/uploads/img1.png) 
