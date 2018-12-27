@@ -1,25 +1,66 @@
 <!DOCTYPE html>
 <htm>  
-    <head></head>
+    <head>
+        <style type="text/css">
+            * {
+            font: 500 16px system-ui, sans-serif;
+            }
+            form {
+            width: 500px;
+            margin: 20px auto;
+            text-align: center;
+            }
+            form > legend {
+            font-size: 36px;
+            color: #3c5b6d;
+            padding: 150px 0 20px;
+            width: 500px;
+            }
+            form > input[type=file], form > input[type=file]:before {
+            display: block;
+            width: 400px;
+            height: 50px;
+            margin: 0 auto;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+            }
+            form > input[type=file] {
+            position: relative;
+            }
+            form > input[type=file]:before {
+            content: 'Choose a Photo';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            color: #3c5b6d;
+            font-size: 18px;
+            background: #fff;
+            border-radius: 3px;
+            border: 2px solid #3c5b6d;
+            }
+            form > button[type=submit] {
+            border-radius: 3px;
+            font-size: 18px;
+            display: block;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            background: #2a76cd;
+            width: 150px;
+            margin: 30px auto;
+            padding: 15px 20px;
+            align-self:center;
+            }
+            </style>
+    </head>
     <body>
-        
-        <form action="https://evening-fjord-96575.herokuapp.com/upload" method="post" enctype="multipart/form-data">
-            <h2>File</h2>
-            
-            <input type="file" name="image" multiple>
-            <button type="submit">Upload</button>
-        </form>
-        <%= typeof msg === 'undefined'? '': msg %><br>
-        <!-- <%= typeof data === ''? '': data%> -->
-            <!-- <img src="<%=data%>" alt='img'> -->
-        <!-- <table>
-            
-            <% for(var i=0; i < data.length; i++) { %>
-               <tr>
-                 <td><%= data[i].id %></td>
-               </tr>
-            <% } %>
-        </table> -->
+            <form class='form'style="align-content:center" action="/upload" method="post" enctype="multipart/form-data">
+                <legend>Upload Image/Images</legend>
+                <input type="file" id="name" name="image" multiple required>
+                <button type="submit"  class="btn btn-primary">Upload</button>
+                <span><%= typeof msg === 'undefined'? '': msg %><br></span>
+            </form><br>
     </body>     
 
 </htm>

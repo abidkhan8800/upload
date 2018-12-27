@@ -29,43 +29,62 @@ var storage = multer.diskStorage({
 	destination: function(req, file, callback) {
 		callback(null, './uploads')
 	},
-	filename: function(req, file, callback) {
-		console.log(file)
+	filename: (req, file, callback)=> {
+		//console.log(file)
 		callback(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     },
-    limits:{fileSize: 1000000},
+
+    
     
 })
 
-const upload = multer({storage: storage}).array('image',5);
+const upload = multer({
+    storage: storage,
+    fileFilter: function (req, file, cb) {
+
+        var filetypes = /jpeg|jpg|png|gif/;
+        var mimetype = filetypes.test(file.mimetype);
+        var extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    
+        if (mimetype && extname) {
+          return cb(null, true);
+        }
+        cb(new Error("File upload only supports the image filetypes"));
+    }
+    
+}).array('image',5);
 
 app.get('/', (req,res)=>{
-    //res.send("hello")
-    res.render('index',{msg: "",data: ''});
+    // res.send("hello")
+    res.render('index');
 
 })
 
 app.post('/upload',(req, res)=>{
+    console.log("hello");
+    //res.send("hello")
     let msg = "";
     upload(req,res,err=>{
         if(err){
-            msg = "Only 5 files at once";
+            msg = err.message;
             //res.render('index',{msg:msg})
        
-        }else{
+         }
+         else{
             //let msg =""
             console.log("hello");
-            msg="file uploaded sucessfully";
+            req.files.length === 1 ? msg="Image uploaded succesfully":msg="Images uploaded successfully"
             console.log(req.files);
-            let locat =`${req.files[0].path}`;
+           //s let locat =`${req.files[0].path}`;
             for(let i =0; i < req.files.length;i++){
             console.log(`${req.files[i].path}`)
             //res.render('index',{msg:msg})
-       
+            //console.log(;
+            
         }
       
         }
-        res.render('index',{msg: msg, data: req.files[0].path});;
+        res.render('index',{msg: msg});;
     })
     
 })
