@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <htm>  
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">   
         <style type="text/css">
             * {
             font: 500 16px system-ui, sans-serif;
@@ -59,7 +62,7 @@
                 <legend>Upload Image/Images</legend>
                 <input type="file" id="name" name="image" multiple required>
                 <button type="submit"  class="btn btn-primary">Upload</button>
-                <span><%= typeof msg === 'undefined'? '': msg %><br></span>
+                <span style="color: #3c5b6d;"><%= typeof msg === 'undefined'? '': msg %><br></span>
             </form><br>
     </body>     
 
