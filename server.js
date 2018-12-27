@@ -80,12 +80,12 @@ app.post('/upload',(req, res)=>{
             req.files.length === 1 ? msg="Image uploaded succesfully":msg="Images uploaded successfully"
             console.log(req.files);
            //s let locat =`${req.files[0].path}`;
-            for(let i =0; i < req.files.length;i++){
-            console.log(`${req.files[i].path}`)
+            // for(let i =0; i < req.files.length;i++){
+            // console.log(`${req.files[i].path}`)
             //res.render('index',{msg:msg})
             //console.log(;
             
-        }
+       // }
       
         }
         res.render('index',{msg: msg});;
