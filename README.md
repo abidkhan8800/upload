@@ -21,6 +21,7 @@ There are several condtions that I,ve used
 
 ## Q. How to run this on your pc?
 * clone the repo - git clone https://github.com/abidkhan8800/upload-image.git
+* cd upload-image
 * npm install
 * npm start 
 * after that goto your loaclhost:8080 you will see the homepage.
@@ -41,6 +42,9 @@ As we can see here the status is **image uploaded successfully**
  ## Location of uploaded image
  You can loacte your image by moving the root directory /upload/yourImage
  ![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img4.png)
+ 
+ ## working link
+* https://rocky-stream-51839.herokuapp.com/
 
  # Thank You
  
