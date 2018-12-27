@@ -16,7 +16,9 @@
 </pre>    
 <pre>
  <strong>Q. What it Does?</strong>
- 
-   This is a simple code which will allow you to add photos to server. Frist when you start the app you will see the following      screen
+            This is a simple code which will allow you to add photos to server. Frist when you start the app you will see the following screen
 </pre>
 ![alt tag](https://raw.githubusercontent.com/abidkhan8800/task2/master/uploads/img1.png) 
+<pre>when you click on choose photos a window will pop up and you can select the select images you want to store as shown in the following photo</pre>
+![alt tag](https://raw.githubusercontent.com/abidkhan8800/task2/master/uploads/img2.png) 
+after selecting the file/files you want to upload to server click on upload button and you will see a message below the upload regarding the status of your process as in this case the images is uploaded successfully as show in the picture.
