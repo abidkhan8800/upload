@@ -50,8 +50,11 @@ const upload = multer({
           return cb(null, true);
         }
         cb(new Error("File upload only supports the image filetypes"));
+    },
+    limits: {
+        fileSize : 1024 * 1024 * 5 ,
+        files: 5
     }
-    
 }).array('image',5);
 
 app.get('/', (req,res)=>{
