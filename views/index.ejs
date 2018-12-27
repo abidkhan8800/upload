@@ -7,14 +7,13 @@
             }
             form {
             width: 500px;
-            margin: 10px auto;
+            margin: 20px auto;
             text-align: center;
-            border: lightblue solid 2px;
             }
             form > legend {
             font-size: 36px;
             color: #3c5b6d;
-            padding: 50px 0 20px;
+            padding: 150px 0 20px;
             width: 500px;
             }
             form > input[type=file], form > input[type=file]:before {
@@ -60,7 +59,7 @@
                 <legend>Upload Image/Images</legend>
                 <input type="file" id="name" name="image" multiple required>
                 <button type="submit"  class="btn btn-primary">Upload</button>
-                <span style="padding: bttom 10px;"><%= typeof msg === 'undefined'? '': msg %><br></span>
+                <span><%= typeof msg === 'undefined'? '': msg %><br></span>
             </form><br>
     </body>     
 
