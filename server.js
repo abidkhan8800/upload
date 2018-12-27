@@ -36,7 +36,7 @@ const upload = multer({
         let extname = filetypes.test(path.extname(file.originalname).toLowerCase());
     
         if (mimetype && extname) {
-          return cb(null, true);
+          return callback(null, true);
         }
         callback(new Error("File upload only supports the image filetypes"));
     },
