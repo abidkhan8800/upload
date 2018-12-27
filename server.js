@@ -6,6 +6,7 @@ const cors = require('cors');
 const ejs = require('ejs');
 
 const app = express();
+const port = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
@@ -15,7 +16,7 @@ app.use(express.static(__dirname+'/uploads'))
 
 
 var storage = multer.diskStorage({
-	destination: function(req, file, callback) {
+	destination: (req, file, callback)=> {
 		callback(null, './uploads')
 	},
 	filename: (req, file, callback)=> {
@@ -29,16 +30,15 @@ var storage = multer.diskStorage({
 
 const upload = multer({
     storage: storage,
-    fileFilter: function (req, file, cb) {
-
-        var filetypes = /jpeg|jpg|png|gif/;
-        var mimetype = filetypes.test(file.mimetype);
-        var extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    fileFilter: (req, file, callback)=> {
+        let filetypes = /jpeg|jpg|png|gif/;
+        let mimetype = filetypes.test(file.mimetype);
+        let extname = filetypes.test(path.extname(file.originalname).toLowerCase());
     
         if (mimetype && extname) {
           return cb(null, true);
         }
-        cb(new Error("File upload only supports the image filetypes"));
+        callback(new Error("File upload only supports the image filetypes"));
     },
     limits: {
         fileSize : 1024 * 1024 * 5 ,
@@ -70,7 +70,7 @@ app.post('/upload',(req, res)=>{
     })
     
 })
-const port = process.env.PORT || 8080;
+
 app.listen(port,()=>{
 
     console.log(`runnin at ${port}`)
