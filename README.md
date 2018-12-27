@@ -1,6 +1,6 @@
 # Image Upload using Node
 
- ## Q. what I have used?
+ ## Q. What I have used?
 * Express – building Server
 * Multer – handing Images
 * Ejs – view Engine
@@ -36,13 +36,13 @@ There are several condtions that I,ve used
 
 ![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img3.png)
 
- As we can see here the status is **image uploaded successfully**
+As we can see here the status is **image uploaded successfully**
  
  ## Location of uploaded image
  You can loacte your image by moving the root directory /upload/yourImage
  ![alt tag](https://raw.githubusercontent.com/abidkhan8800/upload-image/master/uploads/img4.png)
 
- 
+ # Thank You
  
  
 
