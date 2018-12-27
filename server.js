@@ -66,10 +66,13 @@ app.post('/upload',(req, res)=>{
     let msg = "";
     upload(req,res,err=>{
         if(err){
+            if(req.files.length>5){
+                msg="only 5 images at once"
+            }else{
             msg = err.message;
+            }
             //res.render('index',{msg:msg})
-       
-         }
+        }
          else{
             //let msg =""
             console.log("hello");
