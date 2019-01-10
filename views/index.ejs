@@ -32,7 +32,7 @@
             position: relative;
             }
             form > input[type=file]:before {
-            content: 'Choose Photos';
+            content: 'Choose a Photo';
             position: absolute;
             top: -2px;
             left: -2px;
@@ -59,10 +59,13 @@
     </head>
     <body>
             <form class='form'style="align-content:center" action="/upload" method="post" enctype="multipart/form-data">
-                <legend>Upload Image/Images</legend>
+                <legend>Upload Image</legend>
                 <input type="file" id="name" name="image" multiple required>
                 <button type="submit"  class="btn btn-primary">Upload</button>
                 <span style="color: #3c5b6d;"><%= typeof msg === 'undefined'? '': msg %><br></span>
+                <br>
+                <img src="<%=typeof path==='undefined'?'':path%>"  height="auto" width="300px"><br><br>
+                <a href="<%=typeof link ==='undefined'?'':link%>"><%=typeof link ==='undefined'?'':"Link to Actual Photo"%></a>
             </form><br>
     </body>     
 
